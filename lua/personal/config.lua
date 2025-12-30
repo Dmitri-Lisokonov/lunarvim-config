@@ -2,7 +2,8 @@ require("personal.keymaps")
 
 lvim.plugins = lvim.plugins or {}
 vim.list_extend(lvim.plugins, require("personal.plugins.windows"))
-
+lvim.builtin.telescope.defaults.hidden = true
+lvim.builtin.telescope.defaults.no_ignore = true
 vim.opt.relativenumber = true
 vim.opt.number = true
 
