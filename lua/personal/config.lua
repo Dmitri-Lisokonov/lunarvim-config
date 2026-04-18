@@ -1,7 +1,9 @@
 require("personal.keymaps")
 
 lvim.plugins = lvim.plugins or {}
+vim.list_extend(lvim.plugins, require("personal.plugins.gruvbox"))
 vim.list_extend(lvim.plugins, require("personal.plugins.windows"))
+lvim.colorscheme = "gruvbox"
 vim.opt.relativenumber = true
 vim.opt.number = true
 
@@ -19,5 +21,4 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
     vim.bo.filetype = "helm"
   end,
 })
-
 
