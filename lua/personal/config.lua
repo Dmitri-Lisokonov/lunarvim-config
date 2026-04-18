@@ -4,6 +4,8 @@ lvim.plugins = lvim.plugins or {}
 vim.list_extend(lvim.plugins, require("personal.plugins.gruvbox"))
 vim.list_extend(lvim.plugins, require("personal.plugins.windows"))
 lvim.colorscheme = "gruvbox"
+lvim.builtin.illuminate.active = false
+lvim.builtin.treesitter.auto_install = false
 vim.opt.relativenumber = true
 vim.opt.number = true
 
@@ -21,4 +23,3 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
     vim.bo.filetype = "helm"
   end,
 })
-
